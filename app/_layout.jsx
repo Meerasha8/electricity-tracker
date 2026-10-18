@@ -1,10 +1,13 @@
 import { Stack } from 'expo-router';
-import 'react-native-url-polyfill/auto';
+import { StatusBar } from 'expo-status-bar';
 
 export default function RootLayout() {
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <>
+      <StatusBar style="dark" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+      </Stack>
+    </>
   );
 }
